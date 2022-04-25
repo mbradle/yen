@@ -204,7 +204,7 @@ namespace boost {
         std::set<kr_type> B;
 
         // In each iteration we produce the k-th shortest path.
-        for (int k = 1; !K || k <= K.value(); ++k)
+        for (unsigned int k = 1; !K || k <= K.value(); ++k)
           if (!yen_ksp(g, s, t, wm, im, A, B))
             // We break the loop if no path was found.
             break;
